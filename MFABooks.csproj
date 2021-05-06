@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E1D60A1-BA89-4214-A1E7-9DF4E833915E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MFABooks</RootNamespace>
+    <AssemblyName>MFABooks</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogicLayer\BooksBLL.cs" />
+    <Compile Include="BusinessLogicLayer\BooksDetailsBLL.cs" />
+    <Compile Include="BusinessLogicLayer\UsersBLL.cs" />
+    <Compile Include="DateAccessObjectLayer\BooksDAO.cs" />
+    <Compile Include="DateAccessObjectLayer\BooksDetailsDAO.cs" />
+    <Compile Include="DateAccessObjectLayer\UsersDAO.cs" />
+    <Compile Include="dbConnection\DatabaseConnection.cs" />
+    <Compile Include="mfafinalprojectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mfafinalprojectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PocosLayer\BooksDetailsPOCO.cs" />
+    <Compile Include="PocosLayer\BooksPOCO.cs" />
+    <Compile Include="PocosLayer\UsersPoco.cs" />
+    <Compile Include="PresantationLayer\BookDetails\BookDetailsDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\BookDetails\BookDetailsDelete.Designer.cs">
+      <DependentUpon>BookDetailsDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\BookDetails\BookDetailsRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\BookDetails\BookDetailsRegister.Designer.cs">
+      <DependentUpon>BookDetailsRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\BookDetails\BookDetailsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\BookDetails\BookDetailsUpdate.Designer.cs">
+      <DependentUpon>BookDetailsUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Books\BookDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Books\BookDelete.Designer.cs">
+      <DependentUpon>BookDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Books\BookList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Books\BookList.Designer.cs">
+      <DependentUpon>BookList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Books\BookRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Books\BookRegister.Designer.cs">
+      <DependentUpon>BookRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Books\BookUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Books\BookUpdate.Designer.cs">
+      <DependentUpon>BookUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\LoginRegisterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\LoginRegisterPage.Designer.cs">
+      <DependentUpon>LoginRegisterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\AnaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\AnaMenu.Designer.cs">
+      <DependentUpon>AnaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Users\UserDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Users\UserDelete.Designer.cs">
+      <DependentUpon>UserDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Users\UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Users\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Users\UserRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Users\UserRegister.Designer.cs">
+      <DependentUpon>UserRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Users\UserUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Users\UserUpdate.Designer.cs">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresantationLayer\BookDetails\BookDetailsDelete.resx">
+      <DependentUpon>BookDetailsDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\BookDetails\BookDetailsRegister.resx">
+      <DependentUpon>BookDetailsRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\BookDetails\BookDetailsUpdate.resx">
+      <DependentUpon>BookDetailsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Books\BookDelete.resx">
+      <DependentUpon>BookDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Books\BookList.resx">
+      <DependentUpon>BookList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Books\BookRegister.resx">
+      <DependentUpon>BookRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Books\BookUpdate.resx">
+      <DependentUpon>BookUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\LoginRegisterPage.resx">
+      <DependentUpon>LoginRegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\AnaMenu.resx">
+      <DependentUpon>AnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Users\UserDelete.resx">
+      <DependentUpon>UserDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Users\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Users\UserRegister.resx">
+      <DependentUpon>UserRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Users\UserUpdate.resx">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="mfafinalprojectDataSet.xsc">
+      <DependentUpon>mfafinalprojectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mfafinalprojectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mfafinalprojectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mfafinalprojectDataSet.xss">
+      <DependentUpon>mfafinalprojectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
